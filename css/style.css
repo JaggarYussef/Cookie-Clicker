@@ -1,10 +1,4 @@
-body {
-
-  min-height: 100%;
-}
-
-
-#cookie-click {
+#cookie-btn {
     background-image: url(/images/cookie-icon.webp);
     background-size: cover;
     width: 150px;
@@ -28,9 +22,4 @@ body {
 
   background-color: #ECD4D4;
   margin: auto;
-}
-
-.allSpace {
-  width: 100%;
-  margin-top: 5px;
 }
