@@ -1,9 +1,36 @@
+body {
+
+  min-height: 100%;
+}
 
 
-
-#cookie-btn {
+#cookie-click {
     background-image: url(/images/cookie-icon.webp);
     background-size: cover;
     width: 150px;
     height: 150px;
   }
+
+.bg-main {
+
+  background-color: #8D7E7E;
+  color: white;
+}
+
+.bg-second {
+
+  background-color: #BEA6A6;
+  color: white;
+
+}
+
+.bg-sub-second {
+
+  background-color: #ECD4D4;
+  margin: auto;
+}
+
+.allSpace {
+  width: 100%;
+  margin-top: 5px;
+}
