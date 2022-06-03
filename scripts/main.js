@@ -9,7 +9,8 @@
 
 let score = 0;
 let cookieCounter = document.getElementById("cookie-counter");
-document.getElementById("cookie-click").addEventListener('click', () => {
+
+document.getElementById("cookie-btn").addEventListener('click', () => {
 
     //increase score by one
     score++
