@@ -7,16 +7,17 @@
 */
 
 
-(() => {
-    let score = 0;
-   document.getElementById("run").addEventListener('click', () => {
+let score = 0;
+document.getElementById("run").addEventListener('click', () => {
 
-    //increase score by one
-     score++
-     console.log(score);
-        
+ //increase score by one
+  score++
+  console.log(score);
      
-    })
+  
+ })
 
-    
-})();
+ //______________________________________________BONUS_______________________________
+
+
+ //______________________________________________DISPLAY_______________________________
