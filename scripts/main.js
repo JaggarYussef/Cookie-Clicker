@@ -8,14 +8,16 @@
 
 
 let score = 0;
-document.getElementById("run").addEventListener('click', () => {
+let cookieCounter = document.getElementById("cookie-counter");
+document.getElementById("cookie-click").addEventListener('click', () => {
 
- //increase score by one
-  score++
-  console.log(score);
-     
-  
- })
+    //increase score by one
+    score++
+    console.log(score);
+    cookieCounter.innerHTML = score;
+})
+
+
 
  //______________________________________________BONUS_______________________________
 
