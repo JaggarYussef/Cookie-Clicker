@@ -9,6 +9,9 @@
 let multiplier= 1;
 let score = 0;
 
+let cookieCounter = document.getElementById("cookie-counter");
+
+
 //this function increases $score according to the value of the multiplier. Initially the multiplier is 1 
 //once the multplier button is clicked the value of $multiplier will change accordingly
 function increase(){
@@ -19,13 +22,14 @@ function increase(){
 
 
 //click handler 
-document.getElementById("run").addEventListener('click', () => {
+document.getElementById("cookie-btn").addEventListener('click', () => {
 
  
 
  
     increase()
     console.log(score);
+    cookieCounter.innerHTML = score;
      
   
  })
