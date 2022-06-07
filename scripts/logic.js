@@ -11,6 +11,7 @@
 
 let multiplier= 1;
 let score = 0;
+let instance;
 
 
 //______________ HTML POINTERS ______________________
@@ -20,7 +21,7 @@ let cookieCounter = document.getElementById("cookie-counter");
 
 //this function increases $score according to the value of the multiplier. Initially the multiplier is 1 
 //once the multplier button is clicked the value of $multiplier will change accordingly
-function increase(){
+ function increase(){
     score += multiplier; 
 
 }
@@ -33,7 +34,7 @@ document.getElementById("cookie-btn").addEventListener('click', () => {
  
 
  
-    increase()
+    increase();
     console.log(score);
     cookieCounter.innerHTML = score;
      
@@ -62,6 +63,33 @@ document.getElementById("cookie-btn").addEventListener('click', () => {
 
      
 })
+
+
+// class Counter {
+//     constructor(){
+//         if (instance){
+//             throw new Error("Already exists")
+//         }
+//         instance= this;
+//     }
+
+//     getInstance(){
+//         return this;
+//     }
+
+//     getCount(){
+//         return score;
+//     }
+
+//     increment(){
+//         return ++score;
+//     }
+
+//     subtract(amount){
+         
+//         return score -= amount;
+//     }
+// }
 
 
 /*
