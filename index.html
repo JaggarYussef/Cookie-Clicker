@@ -4,21 +4,63 @@
   <meta charset="utf-8">
   <title>Cookie-Clicker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <!-- For bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="overflow-hidden">
   <!-- Website content -->
-  <h1>Cookie-cliker</h1>
-  <h2>Temporary page before using css and making it awesome</h2>
+    <div class="row"> 
+      <!-- <div class="col-7 col-sm-8 bg-main p-2 text-center"><h2>Game</h2></div>
+      <div class="col-5 col-sm-4 bg-second p-2 text-center text-white"><h2>Store</h2></div> -->
+      <!-- Partie qui reprend le cookie et les boutons -->
+      <div class="col-7 col-sm-8 bg-main p-2 text-center">
+      <h1>Always more cookies</h1>
+      <h2>Try to get them all !</h2>
+      <h5>You've got <span id="cookie-counter" class="text-warning">0</span> cookies</h5>
+      <p>That's approximetly <b id="cps">0</b> per second.<br>Try faster, be faster !</p>
+      <section class="material">
+        <div class="actions">
+          <button type="button" id="cookie-btn"></button><br>
+          <button type="button" id="multiplier">Multiply your points</button>
+        </div>
 
-  <section class="material">
-    <div class="actions">
-      <button type="button" id="run">Lancer le script</button>
+        <p>Your points are multiplied by : <span class="text-warning" id="multiplierInfo">1 </span></p>
+        </section>
+      </div>
+
+      
+      <!-- Partie qui reprend les informations et les bonus  -->
+      <div class="col-5 col-sm-4 bg-second text-white text-center p-2 overflow-hidden">
+        <div class="row text-center">
+          <h2>Store</h2>
+          <!-- <p>You've got : <tag id="score"> 0 </tag> point(s). </p> -->
+          <p>Use your cookies to get more.</p>
+        </div>
+
+        <div class="row bg-sub-second mb-3 p-1">
+          <h5>Multiplier</h5>
+        </div>
+        <div class="row justify-content-around">
+          <div class="col-6 col-md-3"><button class="w-100" type="button" id="multiplier-x2">x2</button></div>
+          <div class="col-6 col-md-3"><button class="w-100" type="button" id="multiplier-x10">x10</button></div>
+          <div class="col-6 col-md-3"><button class="w-100" type="button" id="multiplier-x50">x50</button></div>
+          <div class="col-6 col-md-3"><button class="w-100" type="button" id="multiplier-x100">x100</button></div>
+        </div>
+
+        <div class="row bg-sub-second my-3 p-1">
+          <h5>Auto-clickers</h5>
+        </div>
+        <div class="row justify-content-around">
+          <div class="col-4 col-md-3"><button class="w-100" type="button" id="auto-clicker-1">1</button></div>
+          <div class="col-4 col-md-3"><button class="w-100" type="button" id="auto-clicker-2">2</button></div>
+          <div class="col-4 col-md-3"><button class="w-100" type="button" id="auto-clicker-3">3</button></div>
+          <div class="col-4 col-md-3"><button class="w-100" type="button" id="auto-clicker-4">4</button></div>
+        </div>
+      </div>
     </div>
-  </section>
-  <script src="./script.js"></script>
+  
+  <script src="scripts/main.js"></script>
 </body>
 </html>

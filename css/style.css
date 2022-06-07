@@ -1,0 +1,27 @@
+ #cookie-btn {
+  
+    background-image: url("../images/cookie-icon.webp");
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    border: none;
+  }
+
+.bg-main {
+
+  background-color: #8D7E7E;
+  color: white;
+}
+
+.bg-second {
+
+  background-color: #BEA6A6;
+  color: white;
+
+}
+
+.bg-sub-second {
+
+  background-color: #ECD4D4;
+  margin: auto;
+}
