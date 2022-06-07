@@ -9,9 +9,40 @@
 
 //_____________ SCRIPT VARIABLES___________________
 
-let multiplier= 1;
+ 
 let score = 0;
 let instance;
+
+
+
+//_____________    OBJECTS     ______________________
+      // ______  Simple click multipler ______
+    let  multiplier= {
+          value: 1,
+          price: 25,
+          description: `The clicked is increased by ${this.value}`  
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //______________ HTML POINTERS ______________________
@@ -22,7 +53,7 @@ let multiplierValue= document.getElementById("multiplierInfo");
 //this function increases $score according to the value of the multiplier. Initially the multiplier is 1 
 //once the multplier button is clicked the value of $multiplier will change accordingly
  function increase(){
-    score += multiplier; 
+    score += multiplier.value; 
 
 }
 
@@ -31,14 +62,8 @@ let multiplierValue= document.getElementById("multiplierInfo");
 //click handler 
 document.getElementById("cookie-btn").addEventListener('click', () => {
 
- 
-
- 
     increase();
-    console.log(score);
-    cookieCounter.innerHTML = score;
-     
-  
+    cookieCounter.innerHTML = score;  
  })
 
  // ********************* STEP  5 PRICE OF MULTIPLIER ***********************
@@ -46,21 +71,23 @@ document.getElementById("cookie-btn").addEventListener('click', () => {
 //Multiplier button handler 
  document.getElementById("multiplier").addEventListener('click', () => {
 
- //this makes the click add two the value of score and subtracts $Price from score
- //also displays the value of multiplier **** Multiplication de vos points par : $multiplier *****
-  let price = 25;
+ //this makes the click add two the value of score and subtracts $mutliplier.Price from score
+ //also displays the value of multiplier **** Multiplication de vos points par : $multiplier.value*****
+ 
 
 
-  console.log(" this is score");
-  console.log(score);
 
-  if(score > 25){
-    multiplier += 1;
-    score -= price;
+  if(score > multiplier.price){
+    multiplier.value += 1;
+    score -= multiplier.price
+    multiplier.price*= (score * 2);
+    Math.round(multiplier.price); 
     cookieCounter.innerHTML = score;
-    multiplierValue.innerHTML= multiplier;
-    console.log(" branch exed");
+    multiplierValue.innerHTML= multiplier.value;
+
   }
+
+
 
 
      
@@ -105,5 +132,4 @@ class Multiplier{
     
 }
  */
-
 
