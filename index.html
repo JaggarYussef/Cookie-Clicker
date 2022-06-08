@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <title>Cookie-Clicker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <!-- For bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="overflow-hidden">
   <!-- Website content -->
     <div class="row"> 
       <!-- <div class="col-7 col-sm-8 bg-main p-2 text-center"><h2>Game</h2></div>
@@ -23,33 +23,34 @@
       <section class="material">
         <div class="actions">
           <button type="button" id="cookie-btn"></button><br>
-          <button type="button" id="multiplier">Multiplier vos points</button>
+          <button type="button" id="multiplier">Multiply your points</button>
         </div>
 
-        <p id="multiplierInfo"> Multiplication de vos points par : 1 </p>
+        <p>Your points are multiplied by : <span class="text-warning" id="multiplierInfo">1 </span></p>
         </section>
       </div>
 
       
       <!-- Partie qui reprend les informations et les bonus  -->
-      <div class="col-5 col-sm-4 bg-second text-white text-center p-2">
+      <div class="col-5 col-sm-4 bg-second text-white text-center p-2 overflow-hidden">
         <div class="row text-center">
           <h2>Store</h2>
           <!-- <p>You've got : <tag id="score"> 0 </tag> point(s). </p> -->
           <p>Use your cookies to get more.</p>
         </div>
 
-        <div class="row bg-sub-second mb-3">
+        <div class="row bg-sub-second mb-3 p-1 ">
           <h5>Multiplier</h5>
         </div>
-        <div class="row justify-content-around">
-          <div class="col-6 col-md-3"><button class="w-100" type="button" id="multiplier-x2">x2</button></div>
-          <div class="col-6 col-md-3"><button class="w-100" type="button" id="multiplier-x10">x10</button></div>
-          <div class="col-6 col-md-3"><button class="w-100" type="button" id="multiplier-x50">x50</button></div>
-          <div class="col-6 col-md-3"><button class="w-100" type="button" id="multiplier-x100">x100</button></div>
+        <div class="row justify-content-around align-items-center">
+          <div class="col-6 col-md-3 hover"><button class="w-100 x2" type="button" id="multiplier-x2"></button></div>
+            <div class="col-10 col-md-9 hide"><p>It will cost you <b id="cost-multiplier">25</b> credits to use this multiplier.</p></div>
+          <div class="col-6 col-md-3"><button class="w-100 x10" type="button" id="multiplier-x10"></button></div>
+          <div class="col-6 col-md-3"><button class="w-100 x50" type="button" id="multiplier-x50"></button></div>
+          <div class="col-6 col-md-3"><button class="w-100 x100" type="button" id="multiplier-x100"></button></div>
         </div>
 
-        <div class="row bg-sub-second my-3">
+        <div class="row bg-sub-second my-3 p-1">
           <h5>Auto-clickers</h5>
         </div>
         <div class="row justify-content-around">
@@ -60,7 +61,7 @@
         </div>
       </div>
     </div>
-  
+
   <script src="scripts/logic.js"></script>
 </body>
 </html>

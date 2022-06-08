@@ -1,9 +1,10 @@
-
 #cookie-btn {
-    background-image: url(/images/cookie-icon.webp);
+  
+    background-image: url("../images/cookie-icon.webp");
     background-size: cover;
     width: 150px;
     height: 150px;
+    border: none;
   }
 
 .bg-main {
@@ -23,4 +24,47 @@
 
   background-color: #ECD4D4;
   margin: auto;
+}
+
+.x2 {
+
+    background: url("../images/multiply-2.png") transparent center no-repeat;
+    
+    width: 50px;
+    height: 50px;
+    /* border: none; */
+}
+
+.x10 {
+
+  background: url("../images/multiply-10.png") transparent center no-repeat;
+  width: 50px;
+  height: 50px;
+  /* border: none; */
+}
+
+.x50 {
+
+  background: url("../images/multiply-50.png") transparent center no-repeat;
+  width: 50px;
+  height: 50px;
+  /* border: none; */
+
+}
+
+.x100 {
+
+  background: url("../images/multiply-100.png") transparent center no-repeat;
+  width: 50px;
+  height: 50px;
+  /* border: none; */
+}
+
+.hide {
+  display: none;
+}
+
+.hover:hover + .hide {
+  display: block;
+  color: red;
 }
