@@ -1,3 +1,8 @@
+body {
+  overflow: hidden;
+}
+
+
 #cookie-btn {
 
   /* width: 100%;
