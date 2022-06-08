@@ -1,26 +1,30 @@
  #cookie-btn {
-  
-    background-image: url("../images/perfectCookie.png");
-    background-size: cover;
-    width: 150px;
-    height: 150px;
-    border: none;
 
-      width: 256px;
-      height: 256px;
-      left: -128px;
-      top: -128px;
-      background: url("../images/perfectCookie.png");
-      background-size: 256px 256px;
-      cursor: pointer;
-      z-index: 10000;
-      border-radius: 128px;
-      border: none;
-      overflow: hidden;
-      outline: none;
-    
+   /* width: 100%;
+   display: block;
+   height: 256px;
 
-    /* animation: rotation 4s infinite linear;
+   background: url("../images/perfectCookie.png");
+   background-size: cover;
+   cursor: pointer;
+   border: none;
+   overflow: hidden; */
+
+   width: 100%;
+   display: block;
+   width: 256px;
+   height: 256px;
+
+   background: url("../images/perfectCookie.png");
+   background-size: 256px 256px;
+   cursor: pointer;
+   border: none;
+   overflow: hidden;
+
+
+
+
+   /* animation: rotation 4s infinite linear;
  }
 
  
@@ -32,85 +36,94 @@
   to {
     transform: rotate(359deg);
   } */
-}
+ }
 
-#cookie-btn:active {
-  
-    -webkit-animation: bounce .2s infinite alternate;
-    -moz-animation: bounce .2s infinite alternate;
-    animation: bounce .2s infinite alternate;
-    -webkit-animation-iteration-count: 2;
-    -moz-animation-iteration-count: 2;
-    animation-iteration-count: 2;
-  }
-  @-webkit-keyframes bounce {
-    to { -webkit-transform: scale(1.2); }
-  }
-  @-moz-keyframes bounce {
-    to { -moz-transform: scale(1.2); }
-  }
-  @keyframes bounce {
-    to { transform: scale(1.2); }
-  }
+ #cookie-btn:active {
 
-.bg-main {
+   -webkit-animation: bounce .1s infinite alternate;
+   -moz-animation: bounce .1s infinite alternate;
+   animation: bounce .1s infinite alternate;
+   -webkit-animation-iteration-count: 2;
+   -moz-animation-iteration-count: 2;
+   animation-iteration-count: 2;
+ }
 
-  background-color: #8D7E7E;
-  color: white;
-}
+ @-webkit-keyframes bounce {
+   to {
+     -webkit-transform: scale(1.15);
+   }
+ }
 
-.bg-second {
+ @-moz-keyframes bounce {
+   to {
+     -moz-transform: scale(1.15);
+   }
+ }
 
-  background-color: #BEA6A6;
-  color: white;
+ @keyframes bounce {
+   to {
+     transform: scale(1.15);
+   }
+ }
 
-}
+ .bg-main {
 
-.bg-sub-second {
+   background-color: #8D7E7E;
+   color: white;
+ }
 
-  background-color: #ECD4D4;
-  margin: auto;
-}
+ .bg-second {
 
-.x2 {
+   background-color: #BEA6A6;
+   color: white;
 
-    background: url("../images/multiply-2.png") transparent center no-repeat;
-    
-    width: 50px;
-    height: 50px;
-    /* border: none; */
-}
+ }
 
-.x10 {
+ .bg-sub-second {
 
-  background: url("../images/multiply-10.png") transparent center no-repeat;
-  width: 50px;
-  height: 50px;
-  /* border: none; */
-}
+   background-color: #ECD4D4;
+   margin: auto;
+ }
 
-.x50 {
+ .x2 {
 
-  background: url("../images/multiply-50.png") transparent center no-repeat;
-  width: 50px;
-  height: 50px;
-  /* border: none; */
+   background: url("../images/multiply-2.png") transparent center no-repeat;
 
-}
+   width: 50px;
+   height: 50px;
+   /* border: none; */
+ }
 
-.x100 {
+ .x10 {
 
-  background: url("../images/multiply-100.png") transparent center no-repeat;
-  width: 50px;
-  height: 50px;
-  /* border: none; */
-}
+   background: url("../images/multiply-10.png") transparent center no-repeat;
+   width: 50px;
+   height: 50px;
+   /* border: none; */
+ }
 
-.hide {
-  display: none;
-}
+ .x50 {
 
-.hover:hover + .hide {
-  display: block;
-  color: red;
-}
+   background: url("../images/multiply-50.png") transparent center no-repeat;
+   width: 50px;
+   height: 50px;
+   /* border: none; */
+
+ }
+
+ .x100 {
+
+   background: url("../images/multiply-100.png") transparent center no-repeat;
+   width: 50px;
+   height: 50px;
+   /* border: none; */
+ }
+
+ .hide {
+   display: none;
+ }
+
+ .hover:hover+.hide {
+   display: block;
+   color: red;
+ }
