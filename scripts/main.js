@@ -24,9 +24,7 @@ function increase(){
 //click handler 
 document.getElementById("cookie-btn").addEventListener('click', () => {
 
- 
 
- 
     increase()
     console.log(score);
     cookieCounter.innerHTML = score;
@@ -56,5 +54,4 @@ class Multiplier{
     
 }
  */
-
 
