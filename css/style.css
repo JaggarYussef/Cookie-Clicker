@@ -1,12 +1,29 @@
  #cookie-btn {
   
-    background-image: url("../images/cookie-icon.webp");
+    background-image: url("../images/perfectCookie.png");
     background-size: cover;
     width: 150px;
     height: 150px;
     border: none;
+
+      width: 256px;
+      height: 256px;
+      left: -128px;
+      top: -128px;
+      background: url("../images/perfectCookie.png");
+      background-size: 256px 256px;
+      cursor: pointer;
+      z-index: 10000;
+      border-radius: 128px;
+      border: none;
+      overflow: hidden;
+      outline: none;
+    
+
     /* animation: rotation 4s infinite linear;
  }
+
+ 
 
  @keyframes rotation {
   from {
