@@ -1,11 +1,66 @@
 #cookie-btn {
-  
-    background-image: url("../images/cookie-icon.webp");
-    background-size: cover;
-    width: 150px;
-    height: 150px;
-    border: none;
+
+  /* width: 100%;
+  display: block;
+  height: 256px;
+  background: url("../images/perfectCookie.png");
+  background-size: cover;
+  cursor: pointer;
+  border: none;
+  overflow: hidden; */
+
+  width: 100%;
+  display: block;
+  width: 256px;
+  height: 256px;
+
+  background: url("../images/perfectCookie.png");
+  background-size: 256px 256px;
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+
+
+
+
+  /* animation: rotation 4s infinite linear;
+}
+@keyframes rotation {
+ from {
+   transform: rotate(0deg);
+ }
+ to {
+   transform: rotate(359deg);
+ } */
+}
+
+#cookie-btn:active {
+
+  -webkit-animation: bounce .1s infinite alternate;
+  -moz-animation: bounce .1s infinite alternate;
+  animation: bounce .1s infinite alternate;
+  -webkit-animation-iteration-count: 2;
+  -moz-animation-iteration-count: 2;
+  animation-iteration-count: 2;
+}
+
+@-webkit-keyframes bounce {
+  to {
+    -webkit-transform: scale(1.15);
   }
+}
+
+@-moz-keyframes bounce {
+  to {
+    -moz-transform: scale(1.15);
+  }
+}
+
+@keyframes bounce {
+  to {
+    transform: scale(1.15);
+  }
+}
 
 .bg-main {
 
@@ -13,12 +68,12 @@
   color: white;
 }
 
-.bg-second {
+/* .bg-second {
 
   background-color: #BEA6A6;
   color: white;
 
-}
+} */
 
 .bg-sub-second {
 
@@ -28,11 +83,11 @@
 
 .x2 {
 
-    background: url("../images/multiply-2.png") transparent center no-repeat;
-    
-    width: 50px;
-    height: 50px;
-    /* border: none; */
+  background: url("../images/multiply-2.png") transparent center no-repeat;
+
+  width: 50px;
+  height: 50px;
+  /* border: none; */
 }
 
 .x10 {
@@ -64,7 +119,32 @@
   display: none;
 }
 
-.hover:hover + .hide {
+.hover:hover+.hide {
   display: block;
   color: red;
+}
+
+.info-cookies {
+
+  background: #c5b793;
+  color: #fbf1d9;
+}
+
+
+
+/* MODIFICATION TEXTE COULEURS  */
+
+.text-normal {
+  color: #a79a79;
+}
+
+.titre {
+  color:#c5b793;
+}
+
+.bg-second {
+
+  background-color: #fff9e9;
+  color: #8c7f5d;
+
 }
