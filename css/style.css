@@ -1,4 +1,5 @@
 
+
 @font-face {
   font-family: 'pokemon_classicregular';
   src: url('../fonts/pokemon_classic-webfont.woff') format('woff2'),
@@ -15,6 +16,7 @@ body {
 
 
 #cookie-btn {
+
 
   width: 100%;
   display: block;
@@ -54,21 +56,22 @@ body {
 
 @-webkit-keyframes bounce {
   to {
-    -webkit-transform: scale(1.15);
+    -webkit-transform: scale(1.10);
   }
 }
 
 @-moz-keyframes bounce {
   to {
-    -moz-transform: scale(1.15);
+    -moz-transform: scale(1.10);
   }
 }
 
 @keyframes bounce {
   to {
-    transform: scale(1.15);
+    transform: scale(1.10);
   }
 }
+
 
 #pokebadge {
   display: grid;
@@ -94,58 +97,73 @@ body {
   font-size: 2.5vw;
 }
 
-.bg-main {
 
-  background-color: #8D7E7E;
-  color: white;
+
+
+.img-button:active {
+
+  -webkit-animation: bounce .5s infinite alternate;
+  -moz-animation: bounce .5s infinite alternate;
+  animation: bounce .1s infinite alternate;
+  -webkit-animation-iteration-count: 2;
+  -moz-animation-iteration-count: 2;
+  animation-iteration-count: 2;
 }
 
-/* .bg-second {
-
-  background-color: #BEA6A6;
-  color: white;
-
-} */
-
-.bg-sub-second {
-
-  background-color: #ECD4D4;
-  margin: auto;
+@-webkit-keyframes bounce {
+  to {
+    -webkit-transform: scale(1.35);
+  }
 }
 
-.x2 {
+@-moz-keyframes bounce {
+  to {
+    -moz-transform: scale(1.35);
+  }
+}
 
-  background: url("../images/multiply-2.png") transparent center no-repeat;
+@keyframes bounce {
+  to {
+    transform: scale(1.35);
+  }
+}
 
+#pokebadge {
+  display: grid;
+}
+
+#badge-btn {
+  background: url("../images/dawnstone_g.png") center no-repeat;
+  background-size: 50px 50px;
+  margin-top: 53px;
+  margin-right: 2px;
+  width: 100%;
+  display: block;
   width: 50px;
   height: 50px;
-  /* border: none; */
+  border: none;
+  z-index: 1000;
+
+    animation: rotation 4s infinite linear;
 }
-
-.x10 {
-
-  background: url("../images/multiply-10.png") transparent center no-repeat;
-  width: 50px;
-  height: 50px;
-  /* border: none; */
-}
-
-.x50 {
-
-  background: url("../images/multiply-50.png") transparent center no-repeat;
-  width: 50px;
-  height: 50px;
-  /* border: none; */
+@keyframes rotation {
+ from {
+   transform: rotate(0deg);
+ }
+ to {
+   transform: rotate(359deg);
+ } 
 
 }
 
-.x100 {
 
-  background: url("../images/multiply-100.png") transparent center no-repeat;
-  width: 50px;
-  height: 50px;
-  /* border: none; */
+
+#pokebadge>button {
+  grid-area: 1/1;
+  place-self: center;
 }
+
+
 
 .hide {
   display: none;
@@ -195,4 +213,9 @@ body {
   width: 48px;
   height: 48px;
 }
+
+/* AUTO CLICKER EFFECTS  */
+
+
+
 
