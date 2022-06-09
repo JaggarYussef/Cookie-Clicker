@@ -11,7 +11,7 @@
 
  
 let score = 0;
-let instance;
+// let instance;
 
 
 
@@ -43,7 +43,6 @@ let instance;
         if( cursor.count > 0 ){
           let total= cursor.count * cursor.value;
           autoIncrease(total)
-          cookieCounter.innerHTML = score;  
 
    
         }
