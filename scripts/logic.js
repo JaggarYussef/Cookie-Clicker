@@ -131,6 +131,13 @@ function autoIncrease(amount){
     }
 
 
+const pokeballImage = "url('../images/pokeball.png')";
+const superballImage = "url('../images/superball.png')";
+const ultraballImage = "url('../images/ultraball.png')";
+const masterballImage = "url('../images/masterball.png')";
+const goldballImage = "url('../images/goldball.png')";
+
+let currentBallImage = pokeballImage;
 
 
     function booster(toggle){
@@ -147,7 +154,7 @@ function autoIncrease(amount){
         console.log(new Date().getTime())
         multiplierValue.innerHTML= Math.round(multiplierAccu);
     
-        pokeButton.style.backgroundImage= "url('../images/pokeball.png')"
+        pokeButton.style.backgroundImage= currentBallImage;
       }
     }
 
@@ -234,6 +241,9 @@ document.getElementById("cookie-btn").addEventListener('click', () => {
     let roundPrice= Math.round(multiplier.price)
     superBallPrice.innerHTML = ` $ ${roundPrice} <br> Superball`
     increase(multiplierAccu);
+    pokeButton.style.backgroundImage= "url('../images/superball.png')";
+    currentBallImage = superballImage;
+
   }
     
 
@@ -258,6 +268,8 @@ document.getElementById("ultraball").addEventListener('click', () => {
       let roundPrice= Math.round(ultraBall.price)
       ultraBallPrice.innerHTML = ` $ ${roundPrice} <br> Ultraball`
       increase(multiplierAccu);
+      pokeButton.style.backgroundImage= "url('../images/ultraball.png')";
+      currentBallImage = ultraballImage;
     }
       
   
@@ -281,6 +293,8 @@ document.getElementById("ultraball").addEventListener('click', () => {
         let roundPrice= Math.round(masterBall.price)
         masterBallPrice.innerHTML = ` $ ${roundPrice} <br> Masterball`
         increase(multiplierAccu);
+        pokeButton.style.backgroundImage= "url('../images/masterball.png')";
+        currentBallImage = masterballImage;
       }
         
     
@@ -305,6 +319,9 @@ document.getElementById("ultraball").addEventListener('click', () => {
         let roundPrice= Math.round(goldBall.price)
         goldBallPrice.innerHTML = ` $ ${roundPrice} <br> Goldball`
         increase(multiplierAccu);
+        pokeButton.style.backgroundImage= "url('../images/goldball.png')";
+        currentBallImage = goldballImage;
+
       }
         
     
