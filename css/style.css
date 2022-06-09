@@ -1,9 +1,7 @@
-
-
 @font-face {
   font-family: 'pokemon_classicregular';
   src: url('../fonts/pokemon_classic-webfont.woff') format('woff2'),
-       url('../fonts/pokemon_classic-webfont.woff2') format('woff');
+    url('../fonts/pokemon_classic-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 
@@ -93,10 +91,11 @@ body {
   place-self: center;
 }
 
-.superball {
-  font-size: 2.5vw;
+@media only screen and (max-width: 520px) {
+  .superball {
+    font-size: 2.6vw;
+  }
 }
-
 
 
 
@@ -144,15 +143,17 @@ body {
   border: none;
   z-index: 1000;
 
-    animation: rotation 4s infinite linear;
+  animation: rotation 4s infinite linear;
 }
+
 @keyframes rotation {
- from {
-   transform: rotate(0deg);
- }
- to {
-   transform: rotate(359deg);
- } 
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
 
 }
 
@@ -189,7 +190,7 @@ body {
 }
 
 .titre {
-  color:#363b81;
+  color: #363b81;
 }
 
 .bg-second {
@@ -215,7 +216,3 @@ body {
 }
 
 /* AUTO CLICKER EFFECTS  */
-
-
-
-
