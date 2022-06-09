@@ -1,18 +1,20 @@
-body{
+
+@font-face {
+  font-family: 'pokemon_classicregular';
+  src: url('../fonts/pokemon_classic-webfont.woff') format('woff2'),
+       url('../fonts/pokemon_classic-webfont.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body {
   overflow-x: hidden;
+  font-family: 'pokemon_classicregular', Arial, sans-serif !important;
 }
 
 
 #cookie-btn {
-
-  /* width: 100%;
-  display: block;
-  height: 256px;
-  background: url("../images/perfectCookie.png");
-  background-size: cover;
-  cursor: pointer;
-  border: none;
-  overflow: hidden; */
 
   width: 100%;
   display: block;
@@ -66,6 +68,30 @@ body{
   to {
     transform: scale(1.15);
   }
+}
+
+#pokebadge {
+  display: grid;
+}
+
+#badge-btn {
+  background: url("../images/badgeBoulder.png") center;
+  background-size: 50px 50px;
+  width: 100%;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: none;
+
+}
+
+#pokebadge>button {
+  grid-area: 1/1;
+  place-self: center;
+}
+
+.superball {
+  font-size: 2.5vw;
 }
 
 .bg-main {
