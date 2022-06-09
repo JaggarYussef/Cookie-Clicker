@@ -9,6 +9,25 @@ The inspiration we had for our cookie clicker was [this one - orteil cookie clic
 
 ==> Check our work : [Click here to see our masterpiece](https://jaggaryussef.github.io/Cookie-Clicker/)
 
+### Learning Objectives
+
+1. Front-end
+- Create a responsive design
+- Use of wireframe
+- UX & UI thinking
+
+2. Back-end
+- Improve our JavaScript skills
+- See a concret use of JS
+
+3. Others
+- Project management
+- Create a project with a team 
+- Work remotly with a new team
+- Manage Git conflicts
+
+
+
 ## The Challenge
 
 The goal was not to completely replicate the cookie clicker you just saw a second ago. It was to come up with our own concept and write all the necessary codes to make it work as well as the Orteil cookie clicker.
@@ -42,22 +61,6 @@ Here are the feature asked to implement :
 - **Deactivated buttons** : If the player does not have enough credit, he/she should not be able to click the buttons.
 - **Pretty design** : As you may know, everything is better when it looks nice... So we tried to make our game nice to look at. 
 
-### Learning Objectives
-
-1. Front-end
-- Create a responsive design
-- Use of wireframe
-- UX & UI thinking
-
-2. Back-end
-- Improve our JavaScript skills
-- See a concret use of JS
-
-3. Others
-- Project management
-- Create a project with a team 
-- Work remotly with a new team
-- Manage Git conflicts
 
 ## Team Members
 
