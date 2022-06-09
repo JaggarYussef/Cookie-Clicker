@@ -40,14 +40,14 @@ console.log(new Date().getTime())
 
     let  masterBall= {
            value: 5,
-           price: 1500,
+           price: 500,
            count: 0,
            description: `The clicked is increased by ${this.value}`  
       }
 
     let  goldBall= {
             value: 10,
-            price: 7500,
+            price: 1250,
             count: 0,
             description: `The clicked is increased by ${this.value}`  
       }
@@ -72,44 +72,44 @@ function autoIncrease(amount){
 
    // ********************** STEP 10 OBJECT   ***********************
       // ______  Auto clicker ______
-      // Once the auto clicker button is clicked the value of $magiKarp.count becomes is modified 
+      // Once the auto clicker button is clicked the value of $magikarp.count becomes is modified 
       // and increases the score according to give in time in the handler
 
-      let magiKarp = {
+      let magikarp = {
           value: 2,
-          price: 2,
+          price: 50,
           count: 0,
-          description: `The magiKarp clicks the cookie automatically by ${this.value} `,
+          description: `The magikarp clicks the cookie automatically by ${this.value} `,
            
       } 
 
 
       
-      let Snorlax = {
-        value: 2,
-        price: 5,
+      let snorlax = {
+        value: 4,
+        price: 100,
         count: 0,
-        description: `The magiKarp clicks the cookie automatically by ${this.value} `,
+        description: `The magikarp clicks the cookie automatically by ${this.value} `,
          
     } 
 
 
       
-      let Pickachu = {
-        value: 2,
-        price: 2,
+      let pikachu = {
+        value: 10,
+        price: 500,
         count: 0 ,
-        description: `The magiKarp clicks the cookie automatically by ${this.value} `,
+        description: `The magikarp clicks the cookie automatically by ${this.value} `,
         
     } 
 
 
       
-      let MewTwo = {
-        value: 2,
-        price: 2,
+      let mewtwo = {
+        value: 15,
+        price: 1500,
         count: 0,
-        description: `The magiKarp clicks the cookie automatically by ${this.value} `,
+        description: `The magikarp clicks the cookie automatically by ${this.value} `,
         
     } 
 
@@ -168,18 +168,18 @@ function autoIncrease(amount){
 
 let cookieCounter = document.getElementById("cookie-counter");
 let multiplierValue= document.getElementById("multiplierInfo");
-let superBallPirce= document.getElementById("m-1-p");
+let superBallPrice= document.getElementById("m-1-p");
 let ultraBallPrice= document.getElementById("m-2-p");
 let masterBallPrice= document.getElementById("m-3-p");
 let goldBallPrice= document.getElementById("m-4-p");
-let magiKarpPrice= document.getElementById("ac-1-p");
-let SnorlaxPrice= document.getElementById("ac-2-p");
+let magikarpPrice= document.getElementById("ac-1-p");
+let snorlaxPrice= document.getElementById("ac-2-p");
 let pikachuPrice= document.getElementById("ac-3-p") ;
-let mewTwoPrice= document.getElementById("ac-4-p") ;
-let magiKarpCount= document.getElementById("ac-1-c");
-let SnorlaxCount= document.getElementById("ac-2-c") ;
-let pickachuCount= document.getElementById("ac-3-c")  ;
-let mewTowCount= document.getElementById("ac-4-c")  ;
+let mewtwoPrice= document.getElementById("ac-4-p") ;
+let magikarpCount= document.getElementById("ac-1-c");
+let snorlaxCount= document.getElementById("ac-2-c") ;
+let pikachuCount= document.getElementById("ac-3-c")  ;
+let mewtwoCount= document.getElementById("ac-4-c")  ;
 
 
 
@@ -208,7 +208,7 @@ document.getElementById("cookie-btn").addEventListener('click', () => {
     multiplierValue.innerHTML= multiplierAccu;
     multiplier.price *= 1.20
     let roundPrice= Math.round(multiplier.price)
-    superBallPirce.innerHTML = ` $ ${roundPrice} <br> Superball`
+    superBallPrice.innerHTML = ` $ ${roundPrice} <br> Superball`
     increase(multiplierAccu);
   }
     
@@ -294,18 +294,18 @@ document.getElementById("ultraball").addEventListener('click', () => {
 
   document.getElementById("auto-clicker-1").addEventListener('click', () => {
 
-  if( score > magiKarp.price){
-      magiKarp.count += 1;
+  if( score > magikarp.price){
+      magikarp.count += 1;
      
-      let total = magiKarp.count * magiKarp.value;
+      let total = magikarp.count * magikarp.value;
       autoAccu += total;
-      score -= magiKarp.price;
+      score -= magikarp.price;
       cookieCounter.innerHTML= Math.round(score)
-      magiKarp.price *=  1.20;
-      let roundPrice= Math.round(magiKarp.price);
-      magiKarpPrice.innerHTML= " $ " + roundPrice;
-      magiKarpCount.innerHTML= magiKarp.count;
-      setInterval( autoClick, 5000, magiKarp)
+      magikarp.price *=  1.20;
+      let roundPrice= Math.round(magikarp.price);
+      magikarpPrice.innerHTML= " $ " + roundPrice;
+      magikarpCount.innerHTML= magikarp.count;
+      setInterval( autoClick, 5000, magikarp)
       
 
   }
@@ -314,17 +314,17 @@ document.getElementById("ultraball").addEventListener('click', () => {
 
   document.getElementById("auto-clicker-2").addEventListener('click', () => {
 
-    if( score > Snorlax.price){
-        Snorlax.count += 1;
-        let total = Snorlax.count * Snorlax.value;
+    if( score > snorlax.price){
+        snorlax.count += 1;
+        let total = snorlax.count * snorlax.value;
         autoAccu += total;
-        score -= Snorlax.price;
+        score -= snorlax.price;
         cookieCounter.innerHTML= Math.round(score)
-        Snorlax.price *= 1.20;
-        let roundPrice= Math.round(magiKarp.price);
-        SnorlaxPrice.innerHTML= " $ " + roundPrice;
-        SnorlaxCount.innerHTML= Snorlax.count;
-        setInterval( autoClick, 3000, Snorlax)
+        snorlax.price *= 1.20;
+        let roundPrice= Math.round(magikarp.price);
+        snorlaxPrice.innerHTML= " $ " + roundPrice;
+        snorlaxCount.innerHTML= snorlax.count;
+        setInterval( autoClick, 3000, snorlax)
         
     
     }
@@ -334,17 +334,17 @@ document.getElementById("ultraball").addEventListener('click', () => {
 
     document.getElementById("auto-clicker-3").addEventListener('click', () => {
 
-      if( score > Pickachu.price){
-          Pickachu.count += 1;
-          let total = Pickachu.count * Pickachu.value;
+      if( score > pikachu.price){
+          pikachu.count += 1;
+          let total = pikachu.count * pikachu.value;
           autoAccu += total;
-          score -= Pickachu.price;
+          score -= pikachu.price;
           cookieCounter.innerHTML= Math.round(score)
-          Pickachu.price *= 1.20;
-          let roundPrice= Math.round(Pickachu.price);
+          pikachu.price *= 1.20;
+          let roundPrice= Math.round(pikachu.price);
           pikachuPrice.innerHTML= " $ " + roundPrice;
-          pickachuCount.innerHTML= Pickachu.count;
-          setInterval( autoClick, 3000, Pickachu)
+          pikachuCount.innerHTML= pikachu.count;
+          setInterval( autoClick, 3000, pikachu)
           
       
       }
@@ -354,17 +354,17 @@ document.getElementById("ultraball").addEventListener('click', () => {
 
       document.getElementById("auto-clicker-4").addEventListener('click', () => {
 
-        if( score > MewTwo.price){
-            MewTwo.count += 1;
-            let total = MewTwo.count * MewTwo.value;
+        if( score > mewtwo.price){
+            mewtwo.count += 1;
+            let total = mewtwo.count * mewtwo.value;
             autoAccu += total;
-            score -= MewTwo.price;
+            score -= mewtwo.price;
             cookieCounter.innerHTML= Math.round(score)
-            MewTwo.price *= 1.20;
-            let roundPrice= Math.round(MewTwo.price);
-            mewTwoPrice.innerHTML= " $ " +roundPrice;
-            mewTowCount.innerHTML= MewTwo.count;
-            setInterval( autoClick, 3000, MewTwo)
+            mewtwo.price *= 1.20;
+            let roundPrice= Math.round(mewtwo.price);
+            mewtwoPrice.innerHTML= " $ " +roundPrice;
+            mewtwoCount.innerHTML= mewtwo.count;
+            setInterval( autoClick, 3000, mewtwo)
             
         
         }
