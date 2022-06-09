@@ -136,13 +136,13 @@ function autoIncrease(amount){
     function booster(toggle){
       console.log(toggle);
       if(toggle){
-        multiplierAccu += 200;
+        multiplierAccu += 20;
         console.log("booster now is on")
         console.log(new Date().getTime())
         multiplierValue.innerHTML=Math.round(multiplierAccu);
 
       }else{
-        multiplierAccu -= 200;
+        multiplierAccu -= 20;
         console.log("booster now is of")
         console.log(new Date().getTime())
         multiplierValue.innerHTML= Math.round(multiplierAccu);
@@ -161,11 +161,11 @@ function autoIncrease(amount){
     function callBooster(){
       booster(true);
       console.log("called booster");
-      setTimeout(booster, 5000, false);
+      setTimeout(booster, 10000, false);
 
     }
 
-    setInterval(showBooster, 10000);
+    setInterval(showBooster, 30000);
   
 
 
