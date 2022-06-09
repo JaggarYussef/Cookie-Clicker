@@ -54,6 +54,20 @@ console.log(new Date().getTime())
 
 
 
+      //this function increases $score according to the value of the multiplier. Initially the multiplier is 1 
+//once the multplier button is clicked the value of $multiplier will change accordingly
+ function increase(value){
+  score += value; 
+  cookieCounter.innerHTML = Math.round(score);  
+
+}
+
+function autoIncrease(amount){
+  score += amount;
+  cookieCounter.innerHTML = Math.round(score);  
+}
+
+
 
 
    // ********************** STEP 10 OBJECT   ***********************
@@ -63,7 +77,7 @@ console.log(new Date().getTime())
 
       let magiKarp = {
           value: 2,
-          price: 50,
+          price: 2,
           count: 0,
           description: `The magiKarp clicks the cookie automatically by ${this.value} `,
            
@@ -73,7 +87,7 @@ console.log(new Date().getTime())
       
       let Snorlax = {
         value: 2,
-        price: 150,
+        price: 5,
         count: 0,
         description: `The magiKarp clicks the cookie automatically by ${this.value} `,
          
@@ -83,7 +97,7 @@ console.log(new Date().getTime())
       
       let Pickachu = {
         value: 2,
-        price: 500,
+        price: 2,
         count: 0 ,
         description: `The magiKarp clicks the cookie automatically by ${this.value} `,
         
@@ -93,7 +107,7 @@ console.log(new Date().getTime())
       
       let MewTwo = {
         value: 2,
-        price: 1250,
+        price: 2,
         count: 0,
         description: `The magiKarp clicks the cookie automatically by ${this.value} `,
         
@@ -102,12 +116,15 @@ console.log(new Date().getTime())
 
 
 
-      function autoClick( ){
-        if( magiKarp.count > 0 ){
+      function autoClick(autObject){
+        if( autObject.count > 0 ){
 
-          let total= magiKarp.count * magiKarp.value;
-          autoIncrease(total)
-          cookieCounter.innerHTML = score;  
+          //let total= autObject.count * autObject.value;
+          //autoAccu += total;
+          console.log("this is caccu " + autoAccu);
+          console.log("this is obj count" + autObject.count);
+          autoIncrease(autoAccu);
+          //cookieCounter.innerHTML = score;  
 
           
         }
@@ -164,18 +181,7 @@ let SnorlaxCount= document.getElementById("ac-2-c") ;
 let pickachuCount= document.getElementById("ac-3-c")  ;
 let mewTowCount= document.getElementById("ac-4-c")  ;
 
-//this function increases $score according to the value of the multiplier. Initially the multiplier is 1 
-//once the multplier button is clicked the value of $multiplier will change accordingly
- function increase(value){
-    score += value; 
-    cookieCounter.innerHTML = Math.round(score);  
 
-}
-
-function autoIncrease(amount){
-    score += amount;
-    cookieCounter.innerHTML = Math.round(score);  
-}
 
 
 
@@ -290,13 +296,16 @@ document.getElementById("ultraball").addEventListener('click', () => {
 
   if( score > magiKarp.price){
       magiKarp.count += 1;
+     
+      let total = magiKarp.count * magiKarp.value;
+      autoAccu += total;
       score -= magiKarp.price;
       cookieCounter.innerHTML= Math.round(score)
       magiKarp.price *=  1.20;
       let roundPrice= Math.round(magiKarp.price);
       magiKarpPrice.innerHTML= " $ " + roundPrice;
       magiKarpCount.innerHTML= magiKarp.count;
-      setInterval( autoClick, 3000)
+      setInterval( autoClick, 5000, magiKarp)
       
 
   }
@@ -307,13 +316,15 @@ document.getElementById("ultraball").addEventListener('click', () => {
 
     if( score > Snorlax.price){
         Snorlax.count += 1;
+        let total = Snorlax.count * Snorlax.value;
+        autoAccu += total;
         score -= Snorlax.price;
         cookieCounter.innerHTML= Math.round(score)
         Snorlax.price *= 1.20;
         let roundPrice= Math.round(magiKarp.price);
         SnorlaxPrice.innerHTML= " $ " + roundPrice;
         SnorlaxCount.innerHTML= Snorlax.count;
-        setInterval( autoClick, 3000)
+        setInterval( autoClick, 3000, Snorlax)
         
     
     }
@@ -323,15 +334,17 @@ document.getElementById("ultraball").addEventListener('click', () => {
 
     document.getElementById("auto-clicker-3").addEventListener('click', () => {
 
-      if( score > magiKarp.price){
-          magiKarp.count += 1;
-          score -= magiKarp.price;
+      if( score > Pickachu.price){
+          Pickachu.count += 1;
+          let total = Pickachu.count * Pickachu.value;
+          autoAccu += total;
+          score -= Pickachu.price;
           cookieCounter.innerHTML= Math.round(score)
-          magiKarp.price *= 1.20;
+          Pickachu.price *= 1.20;
           let roundPrice= Math.round(Pickachu.price);
           pikachuPrice.innerHTML= " $ " + roundPrice;
           pickachuCount.innerHTML= Pickachu.count;
-          setInterval( autoClick, 3000)
+          setInterval( autoClick, 3000, Pickachu)
           
       
       }
@@ -343,13 +356,15 @@ document.getElementById("ultraball").addEventListener('click', () => {
 
         if( score > MewTwo.price){
             MewTwo.count += 1;
+            let total = MewTwo.count * MewTwo.value;
+            autoAccu += total;
             score -= MewTwo.price;
             cookieCounter.innerHTML= Math.round(score)
             MewTwo.price *= 1.20;
             let roundPrice= Math.round(MewTwo.price);
             mewTwoPrice.innerHTML= " $ " +roundPrice;
             mewTowCount.innerHTML= MewTwo.count;
-            //setInterval( autoClick, 3000)
+            setInterval( autoClick, 3000, MewTwo)
             
         
         }
