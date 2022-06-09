@@ -112,19 +112,19 @@ body {
 
 @-webkit-keyframes bounce {
   to {
-    -webkit-transform: scale(1.35);
+    -webkit-transform: scale(1.1);
   }
 }
 
 @-moz-keyframes bounce {
   to {
-    -moz-transform: scale(1.35);
+    -moz-transform: scale(1.1);
   }
 }
 
 @keyframes bounce {
   to {
-    transform: scale(1.35);
+    transform: scale(1.1);
   }
 }
 
