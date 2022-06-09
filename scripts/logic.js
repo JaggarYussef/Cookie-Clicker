@@ -17,6 +17,10 @@ let instance;
 
 
 
+console.log("starts")
+console.log(new Date().getTime())
+
+
 //_____________    OBJECTS     ______________________
       // ______  Simple click multipler ______
     let  multiplier= {
@@ -59,6 +63,30 @@ let instance;
 
 
 
+
+    function booster(toggle){
+      console.log(toggle);
+      if(toggle){
+        multiplierAccu *= 200;
+        console.log("booster now is on")
+        console.log(new Date().getTime())
+      }else{
+        multiplierAccu /= 200;
+        console.log("booster now is of")
+        console.log(new Date().getTime())
+      }
+    }
+
+
+
+    function callBooster(){
+      booster(true);
+      setTimeout(booster, 5000, false);
+
+    }
+
+    setInterval(callBooster, 10000);
+  
 
 
 
