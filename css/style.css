@@ -1,13 +1,6 @@
 #cookie-btn {
 
-  /* width: 100%;
-  display: block;
-  height: 256px;
-  background: url("../images/perfectCookie.png");
-  background-size: cover;
-  cursor: pointer;
-  border: none;
-  overflow: hidden; */
+
 
   width: 100%;
   display: block;
@@ -61,6 +54,26 @@
   to {
     transform: scale(1.15);
   }
+}
+
+#pokebadge {
+  display: grid;
+}
+
+#badge-btn {
+  background: url("../images/badgeBoulder.png") center;
+  background-size: 50px 50px;
+  width: 100%;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: none;
+
+}
+
+#pokebadge>button {
+  grid-area: 1/1;
+  place-self: center;
 }
 
 .bg-main {
