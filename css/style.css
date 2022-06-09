@@ -1,6 +1,18 @@
+@font-face {
+  font-family: 'pokemon_classicregular';
+  src: url('../fonts/pokemon_classic-webfont.woff') format('woff2'),
+       url('../fonts/pokemon_classic-webfont.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body {
+  font-family: 'pokemon_classicregular', Arial, sans-serif !important;
+}
+
+
 #cookie-btn {
-
-
 
   width: 100%;
   display: block;
@@ -74,6 +86,10 @@
 #pokebadge>button {
   grid-area: 1/1;
   place-self: center;
+}
+
+.superball {
+  font-size: 2.5vw;
 }
 
 .bg-main {
