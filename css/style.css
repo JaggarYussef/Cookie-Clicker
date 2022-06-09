@@ -151,11 +151,17 @@
 }
 
 .no-credit {
-  background: #1e4664;
-  color: white;
+  /* background: url("../images/noCredit.png")   ; */
+  opacity: 1;
 }
 
 .store-title {
   color: #FF0000;
+}
+
+.small-img {
+
+  width: 48px;
+  height: 48px;
 }
 

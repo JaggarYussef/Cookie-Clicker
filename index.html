@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Cookie-Clicker</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Poke-Clicker - Try to get them all!</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <!-- For bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -11,7 +12,8 @@
 
 <body>
   <!-- Website content -->
-    <div class="row vh-100"> 
+    <div class="row justify-content-center align-items-center">
+      <div class="col-lg-6">
       <!-- Partie qui reprend le cookie et les boutons -->
       <div class="col-12 text-center">
 
@@ -27,8 +29,7 @@
 
           <div class="col-8">
               <button type="button" id="cookie-btn"></button><br>
-              <button type="button" id="multiplier">Multiply your points</button>
-              <p>Your points are multiplied by : <span class="text-warning" id="multiplierInfo">1 </span></p>
+              <p>Your points are multiplied by : <b class="text-danger" id="multiplierInfo">1 </b></p>
         </div>
         
         
@@ -38,49 +39,74 @@
           <h2 class="text-uppercase text-wrap titre">S t o r e</h2>
         </div>
 
-        <div class="row justify-content-center bg-second mb-2">
+        <!-- BOOSTER -->
+
+        <div class="row justify-content-center bg-second mb-2 rounded-3">
+          <p class="fw-lighter text-uppercase pt-2">B o o s t e r s</p>
+        </div>
+
+        <div class="row">
+          <div class="col"><small>+10%</small></div>
+          <div class="col"><small>+ 25 %</small></div>
+          <div class="col"><small>+ 50%</small></div>
+          <div class="col"><small>+ 100%</small></div>
+        </div>
+        <div class="row">
+          <div class="col"><img src="images/badgeBoulder.png" id="multiplier-1"></div>
+          <div class="col"><img src="images/badgeCascade.png" id="multiplier-2"></div>
+          <div class="col"><img src="images/badgeVolcano.png" id="multiplier-3"></div>
+          <div class="col"><img src="images/badgeEarth.png" id="multiplier-4"></div>
+        </div>
+        <div class="row">
+          <div class="col"><small>50<br>credits</small></div>
+          <div class="col"><small>250<br>credits</small></div>
+          <div class="col"><small>1500<br>credits</small></div>
+          <div class="col"><small>7500<br>credits</small></div>
+        </div>
+
+        <div class="row justify-content-center bg-second my-2 rounded-3">
           <p class="fw-lighter text-uppercase pt-2">M u l t i p l i e r</p>
         </div>
         
         
           <!-- FIRST MULTIPLIER -->
           <div class="row justify-content-center align-items-center">
-            <div class="col-2"><img src="images/badgeBoulder.png" id="multiplier-1"></div>
-            <div class="col-8">
-              <p><span class="store-title">Boulder | 50 cookies </span><br>
-              <span class="fw-light"><small>Get 200% bonus for 10 secondes.</small></span></p>
+            <div class="col-2"><img src="images/superball.png" id="multiplier-1" class="small-img"></div>
+            <div class="col-7">
+              <p><span class="store-title">Superball | 50 pokeballs</span><br>
+              <span class="fw-light"><small>Get 2 pokeballs for every click.</small></span></p>
             </div>
-            <div class="col-1">0</div>
+            <div class="col-2">0</div>
           </div>
 
           <!-- SECOND MULTIPLIER -->
           <div class="row justify-content-center align-items-center">
-            <div class="col-2"><img src="images/badgeCascade.png" id="multiplier-2"></div>
-            <div class="col-8">
-              <p><span class="store-title">Cascade | 150 cookies</span><br>
-              <span class="fw-light"><small>Get 500% bonus for 10 secondes.</small></span></p>
+            <div class="col-2"><img src="images/ultraball.png" id="multiplier-2" class="small-img"></div>
+            <div class="col-7">
+              <p><span class="store-title">Ultraball | 200 pokeballs</span><br>
+              <span class="fw-light"><small>Get 10 pokeballs for every click.</small></span></p>
             </div>
-            <div class="col-1">0</div>
+            <div class="col-2">0</div>
           </div>
 
           <!-- THIRD MULTIPLIER -->
           <div class="row justify-content-center align-items-center">
-            <div class="col-2"><img src="images/badgeVolcano.png" id="multiplier-3"></div>
-            <div class="col-8">
-              <p><span class="store-title">Volcano | 500 cookies</span><br>
-              <span class="fw-light"><small>Get 1000% bonus for 10 secondes.</small></span></p>
+            <div class="col-2"><img src="images/masterball.png" id="multiplier-3" class="small-img"></div>
+            <div class="col-7">
+              <p><span class="store-title">Masterball | 1000 pokeballs</span><br>
+              <span class="fw-light"><small>Get 50 pokeballs for every click.</small></span></p>
             </div>
-            <div class="col-1">0</div>
+            <div class="col-2">0</div>
           </div>
 
           <!-- FOURTH MULTIPLIER -->
           <div class="row justify-content-center align-items-center no-credit">
-            <div class="col-2"><img src="images/badgeEarth.png" id="multiplier-4"></div>
-            <div class="col-8">
-              <p><span class="store-title">Earth | 1250 cookies</span><br>
-              <span class="fw-light"><small>Get 2000% bonus for 10 secondes.</small></span></p>
+            <div class="col-2"><img src="images/goldball.png" id="multiplier-4" class="small-img"></div>
+            <div class="col-7">
+              <p><span class="store-title">Goldball | 4000 pokeballs</span><br>
+              <span class="fw-light"><small>Get 250 pokeballs for every click.</small></span></p>
             </div>
-            <div class="col-1">0</div>
+            <div class="col-2">0</div>
           </div>        
       </div>
       <!-- FIN MULTIPLIER -->
@@ -88,51 +114,51 @@
 
       
       <!-- DEBUT AUTO-CLICKERS -->
-      <div class="row bg-second my-1">
-        <p class="fw-lighter text-uppercase pt-2">A u to - c l i c k e r s</p>
+      <div class="row bg-second my-1 rounded-3">
+        <p class="fw-lighter text-uppercase pt-2 ">A u to - c l i c k e r s</p>
        </div> 
 
         <!-- FIRST -->
         <div class="row justify-content-center align-items-center m-0">
           <div class="col-2"><img src="images/autoMagikarp.gif" id="auto-clicker-1"></div>
-          <div class="col-8">
+          <div class="col-7">
             <p><span class="store-title">Magikarp | 50 cookies</span><br>
             <span class="fw-light"><small>Get 200% bonus for 10 secondes.</small></span></p>
           </div>
-          <div class="col-1">0</div>
+          <div class="col-2">0</div>
         </div>
 
         <!-- SECOND -->
         <div class="row justify-content-center align-items-center m-0">
           <div class="col-2"><img src="images/autoSnorlax.gif" id="auto-clicker-2"></div>
-          <div class="col-8">
+          <div class="col-7">
             <p><span class="store-title">Snorlax | 150 cookies</span><br>
             <span class="fw-light"><small>Get 500% bonus for 10 secondes.</small></span></p>
           </div>
-          <div class="col-1">0</div>
+          <div class="col-2">0</div>
         </div>
 
         <!-- THIRD -->
         <div class="row justify-content-center align-items-center m-0">
           <div class="col-2"><img src="images/autoPikachu.gif" id="auto-clicker-3"></div>
-          <div class="col-8">
+          <div class="col-7">
             <p><span class="store-title">Pikachu | 500 cookies</span> <br>
             <span class="fw-light"><small>Get 1000% bonus for 10 secondes.</small></span></p>
           </div>
-          <div class="col-1">0</div>
+          <div class="col-2">0</div>
         </div>
 
         <!-- FOURTH -->
         <div class="row justify-content-center align-items-center m-0">
           <div class="col-2"><img src="images/autoMewtwo.gif" id="auto-clicker-4"></div>
-          <div class="col-8">
+          <div class="col-7">
             <p><span class="store-title">Mewtwo | 1250 cookies</span> <br>
             <span class="fw-light"><small>Get 2000% bonus for 10 secondes.</small></span></p>
           </div>
-          <div class="col-1">0</div>
+          <div class="col-2">0</div>
         </div> 
         
-        
+      </div> 
     </div>
         
 
