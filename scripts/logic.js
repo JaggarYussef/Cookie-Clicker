@@ -11,7 +11,9 @@
 
  
 let score = 0;
-// let instance;
+let multiplierAccu= 1;
+let autoAccu= 0;
+let instance;
 
 
 
@@ -19,7 +21,7 @@ let score = 0;
       // ______  Simple click multipler ______
     let  multiplier= {
           value: 1,
-          price: 5,
+          price: 25,
           description: `The clicked is increased by ${this.value}`  
       }
 
@@ -30,7 +32,7 @@ let score = 0;
       // and increases the score according to give in time in the handler
 
       let cursor = {
-          value: 1,
+          value: 2,
           price: 10,
           count: 0,
           description: `The cursor clicks the cookie automatically by ${this.value} `,
@@ -38,15 +40,45 @@ let score = 0;
       } 
 
 
- 
+
       function autoClick( ){
         if( cursor.count > 0 ){
+
           let total= cursor.count * cursor.value;
           autoIncrease(total)
+          cookieCounter.innerHTML = score;  
 
-   
+          console.log("# cursors "+ cursor.count  );
+        }else{
+            console.log("CALLED BUT NOT ENOUGH");
+            console.log("this is score from cursor branch "  +  score );
+            console.log("this is COUNT from cursor branch "  +  cursor.count );
+
         }
     }
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -57,15 +89,15 @@ let multiplierValue= document.getElementById("multiplierInfo");
 
 //this function increases $score according to the value of the multiplier. Initially the multiplier is 1 
 //once the multplier button is clicked the value of $multiplier will change accordingly
- function increase(){
-    score += multiplier.value; 
+ function increase(value){
+    score += value; 
     cookieCounter.innerHTML = Math.round(score);  
 
 }
 
 function autoIncrease(amount){
     score += amount;
-    cookieCounter.innerHTML = Math.round(score);
+    cookieCounter.innerHTML = Math.round(score);  
 }
 
 
@@ -73,9 +105,14 @@ function autoIncrease(amount){
 //click handler 
 document.getElementById("cookie-btn").addEventListener('click', () => {
 
-    increase();
+    increase(multiplierAccu);
  
  })
+
+
+
+
+
 
 
 
@@ -88,23 +125,21 @@ document.getElementById("cookie-btn").addEventListener('click', () => {
 //Multiplier button handler 
  document.getElementById("multiplier").addEventListener('click', () => {
 
-//this makes the click add two the value of score and subtracts $mutliplier.Price from score
-//also displays the value of multiplier **** Multiplication de vos points par : $multiplier.value*****
- 
+//this adds 1 to the $multiplierAccu value which is later passed on to the main increase function
 
 
 
   if(score > multiplier.price){
-    multiplier.value += 1;
-    score -= multiplier.price
-    multiplier.price*= 1.20;
-
-  
-   // cookieCounter.innerHTML = score;
-    multiplierValue.innerHTML= multiplier.value;
+    multiplierAccu += multiplier.value;
+    score -= multiplier.price;
+    multiplierValue.innerHTML= multiplierAccu;
+    multiplier.price*= (score * 1.20);
+    increase(multiplierAccu);
   }
+    
 
-  
+
+     
 })
 
 
@@ -114,12 +149,28 @@ document.getElementById("cookie-btn").addEventListener('click', () => {
 document.getElementById("auto-clicker-1").addEventListener('click', () => {
 
 if( score > cursor.price){
+    console.log("exed");
     cursor.count += 1;
+    console.log( "cursor count" + cursor.count );
     score -= cursor.price;
-    cursor.price *= 1.20;
-    setInterval( autoClick, 10000)
+    cursor.price *= (score * 2);
+    console.log( "price " + cursor.price );
+    setInterval( autoClick, 3000)
+    console.log( "this is score" + score );
+
 }
 })
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -169,4 +220,5 @@ class Multiplier{
     
 }
  */
+
 
