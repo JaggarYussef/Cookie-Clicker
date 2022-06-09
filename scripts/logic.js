@@ -146,19 +146,29 @@ function autoIncrease(amount){
         console.log("booster now is of")
         console.log(new Date().getTime())
         multiplierValue.innerHTML= Math.round(multiplierAccu);
+    
+        pokeButton.style.backgroundImage= "url('../images/pokeball.png')"
       }
     }
 
 
+    function showBooster(){
+      badge.style.visibility = "visible";
+
+    }
+
 
     function callBooster(){
       booster(true);
+      console.log("called booster");
       setTimeout(booster, 5000, false);
 
     }
 
-    //  setInterval(callBooster, 10000);
+    setInterval(showBooster, 10000);
   
+
+
 
 
 
@@ -181,6 +191,11 @@ let snorlaxCount= document.getElementById("ac-2-c") ;
 let pikachuCount= document.getElementById("ac-3-c")  ;
 let mewtwoCount= document.getElementById("ac-4-c")  ;
 
+let badge= document.getElementById("badge-btn");
+let pokeButton=  document.getElementById("cookie-btn");
+
+
+
 
 
 
@@ -191,6 +206,15 @@ document.getElementById("cookie-btn").addEventListener('click', () => {
     increase(multiplierAccu);
  
  })
+
+
+ document.getElementById("badge-btn").addEventListener('click', () => {
+  badge.style.visibility = "hidden";
+  pokeButton.style.backgroundImage= "url('../images/bonusball.png')"
+ 
+  callBooster()
+
+})
 
 
 
