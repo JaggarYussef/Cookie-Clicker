@@ -18,7 +18,7 @@ The inspiration we had for our cookie clicker was [this one - orteil cookie clic
 
 2. Back-end
 - Improve our JavaScript skills
-- See a concret use of JS
+- See a practical use of JS
 
 3. Others
 - Project management
@@ -34,13 +34,13 @@ The goal was not to completely replicate the cookie clicker you just saw a secon
 
 ## Our Project
 
-We wanted to change the concept and make it our own. Instead of a cookie-clicker we worked on a "Pokeball clicker". Everytime people click on the pokedall, they will get a Pokedollar which is needed in order to buy boosters, multipliers or auto-clickers. 
+We wanted to change the concept and make it our own. Instead of a cookie-clicker we worked on a "Pokeball clicker". Everytime people click on the pokeball, they will get a Pokedollar which is needed in order to buy boosters, multipliers or auto-clickers. 
 
-When reaching a certain amount of Pokeball, players will be able to buy multipliers that will multiply the number of Pokedollars they own for a certain price. 
+When reaching a certain amount of Pokeball, players will be able to buy multipliers that will multiply the number of Pokedollars they earn for a certain price. 
 
-Auto-clickers are pokemons that will click for player every second or so, helping them collect as much Pokedollar possible without them clicking.
+Auto-clickers are pokemons that will click for player every second or so, helping them collect as much Pokedollar as possible without them clicking.
 
-Boosters are temporaly boost that give an increased amount of Pokedollar while clicking. It last for 30 secondes.
+Boosters are temporary boost that give an increased amount of Pokedollar while clicking. They last for 30 seconds.
 
 Just for your information, we used **Bootstrap** framework for the front-end.
 
@@ -58,7 +58,7 @@ Here are the feature asked to implement :
 - **Cost displayer** : Players need to see how much money it takes to get something.
 - **Auto-clicker** options : Players can pay to receive auto-clicks automatically.
 - **Bonus** : To make the game even better, some bonuses are available and give a boost to the score for a limited time.
-- **Deactivated buttons** : If the player does not have enough credit, he/she should not be able to click the buttons.
+- **Desactivated buttons** : If the player does not have enough credit, he/she should not be able to click the buttons.
 - **Pretty design** : As you may know, everything is better when it looks nice... So we tried to make our game nice to look at. 
 
 
