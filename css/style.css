@@ -56,13 +56,44 @@
   }
 }
 
+
+.img-button:active {
+
+  -webkit-animation: bounce .1s infinite alternate;
+  -moz-animation: bounce .1s infinite alternate;
+  animation: bounce .1s infinite alternate;
+  -webkit-animation-iteration-count: 2;
+  -moz-animation-iteration-count: 2;
+  animation-iteration-count: 2;
+}
+
+@-webkit-keyframes bounce {
+  to {
+    -webkit-transform: scale(1.10);
+  }
+}
+
+@-moz-keyframes bounce {
+  to {
+    -moz-transform: scale(1.10);
+  }
+}
+
+@keyframes bounce {
+  to {
+    transform: scale(1.10);
+  }
+}
+
 #pokebadge {
   display: grid;
 }
 
 #badge-btn {
-  background: url("../images/badgeBoulder.png") center;
+  background: url("../images/dawnstone_g.png") center no-repeat;
   background-size: 50px 50px;
+  margin-top: 53px;
+  margin-right: 2px;
   width: 100%;
   display: block;
   width: 50px;
@@ -70,63 +101,26 @@
   border: none;
   z-index: 1000;
 
+    animation: rotation 4s infinite linear;
 }
+@keyframes rotation {
+ from {
+   transform: rotate(0deg);
+ }
+ to {
+   transform: rotate(359deg);
+ } 
+
+}
+
+
 
 #pokebadge>button {
   grid-area: 1/1;
   place-self: center;
 }
 
-.bg-main {
 
-  background-color: #8D7E7E;
-  color: white;
-}
-
-/* .bg-second {
-  background-color: #BEA6A6;
-  color: white;
-} */
-
-.bg-sub-second {
-
-  background-color: #ECD4D4;
-  margin: auto;
-}
-
-.x2 {
-
-  background: url("../images/multiply-2.png") transparent center no-repeat;
-
-  width: 50px;
-  height: 50px;
-  /* border: none; */
-}
-
-.x10 {
-
-  background: url("../images/multiply-10.png") transparent center no-repeat;
-  width: 50px;
-  height: 50px;
-  /* border: none; */
-}
-
-.x50 {
-
-  background: url("../images/multiply-50.png") transparent center no-repeat;
-  width: 50px;
-  height: 50px;
-  /* border: none; */
-
-}
-
-.x100 {
-
-  background: url("../images/multiply-100.png") transparent center no-repeat;
-  width: 50px;
-  height: 50px;
-  /* border: none; */
-}
 
 .hide {
   display: none;
