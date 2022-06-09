@@ -81,11 +81,11 @@ console.log(new Date().getTime())
 
     function callBooster(){
       booster(true);
-      setTimeout(booster, 5000, false);
+      setTimeout(booster, 50000, false);
 
     }
 
-    setInterval(callBooster, 10000);
+    setInterval(callBooster, 100000);
   
 
 
@@ -151,11 +151,13 @@ document.getElementById("cookie-btn").addEventListener('click', () => {
  // ********************* STEP  9 MODIFY PRICE OF MULTIPLIER  ***********************
 
 //Multiplier button handler 
- document.getElementById("multiplier").addEventListener('click', () => {
+ document.getElementById("multiplier-1").addEventListener('click', () => {
 
 //this adds 1 to the $multiplierAccu value which is later passed on to the main increase function
 
-
+if (score < multiplier.price) {
+  console.log("need more poke dollar")
+}
 
   if(score > multiplier.price){
     multiplierAccu += multiplier.value;

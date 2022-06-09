@@ -152,7 +152,7 @@
 
 .no-credit {
   /* background: url("../images/noCredit.png")   ; */
-  opacity: 1;
+  opacity: 0.4;
 }
 
 .store-title {
