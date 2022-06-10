@@ -131,11 +131,11 @@ function autoClick(autObject) {
 }
 
 
-const pokeballImage = "url('../images/pokeball.png')";
-const superballImage = "url('../images/superball.png')";
-const ultraballImage = "url('../images/ultraball.png')";
-const masterballImage = "url('../images/masterball.png')";
-const goldballImage = "url('../images/goldball.png')";
+const pokeballImage = "url('./../images/pokeball.png')";
+const superballImage = "url('./../images/superball.png')";
+const ultraballImage = "url('./../images/ultraball.png')";
+const masterballImage = "url('./../images/masterball.png')";
+const goldballImage = "url('./../images/goldball.png')";
 
 let currentBallImage = pokeballImage;
 
@@ -217,7 +217,7 @@ document.getElementById("cookie-btn").addEventListener('click', () => {
 
 document.getElementById("badge-btn").addEventListener('click', () => {
   badge.style.visibility = "hidden";
-  pokeButton.style.backgroundImage = "url('../images/bonusball.png')"
+  pokeButton.style.backgroundImage = "url('./../images/bonusball.png')"
 
   callBooster()
 
@@ -255,7 +255,7 @@ document.getElementById("superball").addEventListener('click', () => {
     let roundPrice = Math.round(multiplier.price)
     superBallPrice.innerHTML = ` $ ${roundPrice} <br> Superball`
     increase(multiplierAccu);
-    pokeButton.style.backgroundImage = "url('../images/superball.png')";
+    pokeButton.style.backgroundImage = "url('./../images/superball.png')";
     currentBallImage = superballImage;
 
   }
@@ -287,7 +287,7 @@ document.getElementById("ultraball").addEventListener('click', () => {
     let roundPrice = Math.round(ultraBall.price)
     ultraBallPrice.innerHTML = ` $ ${roundPrice} <br> Ultraball`
     increase(multiplierAccu);
-    pokeButton.style.backgroundImage = "url('../images/ultraball.png')";
+    pokeButton.style.backgroundImage = "url('./../images/ultraball.png')";
     currentBallImage = ultraballImage;
   }
   else if (score < ultraBall.price) {
@@ -317,7 +317,7 @@ document.getElementById("masterball").addEventListener('click', () => {
     let roundPrice = Math.round(masterBall.price)
     masterBallPrice.innerHTML = ` $ ${roundPrice} <br> Masterball`
     increase(multiplierAccu);
-    pokeButton.style.backgroundImage = "url('../images/masterball.png')";
+    pokeButton.style.backgroundImage = "url('./../images/masterball.png')";
     currentBallImage = masterballImage;
   }
   else if (score < masterBall.price) {
@@ -348,7 +348,7 @@ document.getElementById("goldball").addEventListener('click', () => {
     let roundPrice = Math.round(goldBall.price)
     goldBallPrice.innerHTML = ` $ ${roundPrice} <br> Goldball`
     increase(multiplierAccu);
-    pokeButton.style.backgroundImage = "url('../images/goldball.png')";
+    pokeButton.style.backgroundImage = "url('./../images/goldball.png')";
     currentBallImage = goldballImage;
 
   }
