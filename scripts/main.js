@@ -17,15 +17,14 @@ let instance;
 
 
 
-console.log("starts")
-console.log(new Date().getTime())
+
 
 
 //_____________    OBJECTS     ______________________
 // ______  Simple click multipler ______
 let multiplier = {
   value: 1,
-  price: 50,
+  price: 20,
   count: 0,
   description: `The clicked is increased by ${this.value}`
 }
@@ -33,14 +32,14 @@ let multiplier = {
 
 let ultraBall = {
   value: 2,
-  price: 250,
+  price: 100,
   count: 0,
   description: `The clicked is increased by ${this.value}`
 }
 
 let masterBall = {
   value: 5,
-  price: 500,
+  price: 300,
   count: 0,
   description: `The clicked is increased by ${this.value}`
 }
@@ -255,8 +254,16 @@ document.getElementById("superball").addEventListener('click', () => {
     let roundPrice = Math.round(multiplier.price)
     superBallPrice.innerHTML = ` $ ${roundPrice} <br> Superball`
     increase(multiplierAccu);
-    pokeButton.style.backgroundImage = "url('./images/superball.png')";
+    console.log(ultraBall.count);
+
+    if (ultraBall.count>0||masterBall.count>0||goldBall.count>0) {
+      return 
+    }
+
+
     currentBallImage = superballImage;
+    pokeButton.style.backgroundImage = "url('./images/superball.png')";
+
 
   }
   else if (score < multiplier.price) {
@@ -279,6 +286,7 @@ document.getElementById("ultraball").addEventListener('click', () => {
 
 
   if (score > ultraBall.price) {
+    ultraBall.count += 1;
     multiplierAccu += ultraBall.value;
     score -= ultraBall.price;
     multiplierValue.innerHTML = multiplierAccu;
@@ -287,6 +295,11 @@ document.getElementById("ultraball").addEventListener('click', () => {
     let roundPrice = Math.round(ultraBall.price)
     ultraBallPrice.innerHTML = ` $ ${roundPrice} <br> Ultraball`
     increase(multiplierAccu);
+
+    if (masterBall.count>0||goldBall.count>0) {
+      return 
+    }
+
     pokeButton.style.backgroundImage = "url('./images/ultraball.png')";
     currentBallImage = ultraballImage;
   }
@@ -310,6 +323,7 @@ document.getElementById("masterball").addEventListener('click', () => {
 
 
   if (score > masterBall.price) {
+    masterBall.count += 1;
     multiplierAccu += masterBall.value;
     score -= masterBall.price;
     multiplierValue.innerHTML = multiplierAccu;
@@ -317,6 +331,11 @@ document.getElementById("masterball").addEventListener('click', () => {
     let roundPrice = Math.round(masterBall.price)
     masterBallPrice.innerHTML = ` $ ${roundPrice} <br> Masterball`
     increase(multiplierAccu);
+
+    if (goldBall.count>0) {
+      return 
+    }
+
     pokeButton.style.backgroundImage = "url('./images/masterball.png')";
     currentBallImage = masterballImage;
   }
@@ -341,6 +360,7 @@ document.getElementById("goldball").addEventListener('click', () => {
 
 
   if (score > goldBall.price) {
+    goldBall.count += 1;
     multiplierAccu += goldBall.value;
     score -= goldBall.price;
     multiplierValue.innerHTML = multiplierAccu;
