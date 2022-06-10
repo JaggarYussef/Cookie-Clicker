@@ -3,7 +3,7 @@
 ## Introduction
 
 Welcome aboard, comrades. In this file, you will discover a project on which we worked in groups of three during a few days (4 to be precise). 
-The goal of this challenge was to use JavaScript and test our skills by trying to reproduce a Cookie Cliker.
+The goal of this challenge was to use JavaScript and test our skills by trying to reproduce a Cookie Clicker.
 
 The inspiration we had for our cookie clicker was [this one - orteil cookie clicker](https://orteil.dashnet.org/cookieclicker/).
 
