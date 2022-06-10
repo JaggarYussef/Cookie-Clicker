@@ -167,11 +167,11 @@ function showBooster() {
 function callBooster() {
   booster(true);
   console.log("called booster");
-  setTimeout(booster, 10000, false);
+  setTimeout(booster, 5000, false);
 
 }
 
-setInterval(showBooster, 30000);
+setInterval(showBooster, 18000);
 
 
 
@@ -230,6 +230,7 @@ function yourTooPoor(banner, timer) {
   toast.appendChild(pokeAlert);
   banner.appendChild(toast);
   toast.style.backgroundColor = "#FF0000";
+  toast.classList.add("rounded-3");
 
   setTimeout(() => {
 
