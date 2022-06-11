@@ -86,7 +86,7 @@ let magikarp = {
 
 let snorlax = {
   value: 4,
-  price: 100,
+  price: 150,
   count: 0,
   description: `The magikarp clicks the cookie automatically by ${this.value} `,
 
