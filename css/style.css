@@ -12,7 +12,7 @@
 body {
   overflow-x: hidden;
   font-family: 'pokemon_classicregular', Arial, sans-serif !important;
-  
+  touch-action: manipulation;
 }
 
 
