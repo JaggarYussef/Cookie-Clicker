@@ -230,7 +230,9 @@ function yourTooPoor(banner, timer) {
   toast.appendChild(pokeAlert);
   banner.appendChild(toast);
   toast.style.backgroundColor = "#FF0000";
+  toast.style.color = "white";
   toast.classList.add("rounded-3");
+  toast.classList.add("col-10");
 
   setTimeout(() => {
 
