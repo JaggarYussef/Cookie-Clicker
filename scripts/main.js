@@ -422,7 +422,7 @@ document.getElementById("auto-clicker-2").addEventListener('click', () => {
     score -= snorlax.price;
     cookieCounter.innerHTML = Math.round(score)
     snorlax.price *= 1.20;
-    let roundPrice = Math.round(magikarp.price);
+    let roundPrice = Math.round(snorlax.price);
     snorlaxPrice.innerHTML = " $ " + roundPrice;
     snorlaxCount.innerHTML = snorlax.count;
     setInterval(autoClick, 3000, snorlax)
