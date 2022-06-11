@@ -1,3 +1,5 @@
+
+
 @font-face {
   font-family: 'pokemon_classicregular';
   src: url('../fonts/pokemon_classic-webfont.woff') format('woff2'),
@@ -10,6 +12,7 @@
 body {
   overflow-x: hidden;
   font-family: 'pokemon_classicregular', Arial, sans-serif !important;
+  
 }
 
 
