@@ -15,157 +15,161 @@
 <body class="row justify-content-center align-items-center">
   <!-- Website content -->
   <!-- <div class="col-md-10 col-xxl-8"> -->
-    <!-- Partie qui reprend le cookie et les boutons -->
-    <div class="col-12 col-md-10 col-xxl-8 text-center">
+  <!-- Partie qui reprend le cookie et les boutons -->
+  <div class="col-12 col-md-10 col-xxl-8 text-center">
 
-      <!-- Partie qui reprend le nombre de cookies -->
-      <div class="row justify-content-center mt-3">
-        <div class="col-8 rounded-3 info-cookies">
-          <p><span id="cookie-counter" class="text-warning fs-3">0</span><br>Pokédollar in the bank.</p>
+    <!-- Partie qui reprend le nombre de cookies -->
+    <div class="row justify-content-center mt-3">
+      <div class="col-8 rounded-3 info-cookies">
+        <p><span id="cookie-counter" class="text-warning fs-3">0</span><br>Pokédollar in the bank.</p>
+      </div>
+      <div class="col-8 mt-2">
+        <p class="lh-sm text-normal">Try to get them all !</p>
+      </div>
+
+      <div class="col-8">
+        <div id="pokebadge">
+          <button type="button" id="cookie-btn"></button>
+          <button id="badge-btn"></button>
         </div>
-        <div class="col-8 mt-2">
-          <p class="lh-sm text-normal">Try to get them all !</p>
-        </div>
-
-        <div class="col-8">
-          <div id="pokebadge">
-            <button type="button" id="cookie-btn"></button>
-            <button id="badge-btn"></button>
-          </div>
-          <br>
-          <p>Each click gives you $<b class="text-danger" id="multiplierInfo">1</b></p>
-        </div>
+        <br>
+        <p>Each click gives you $<b class="text-danger" id="multiplierInfo">1</b></p>
+      </div>
 
 
-        <!-- STORE -->
+      <!-- STORE -->
 
-        <div class="row justify-content-around my-2">
-          <h2 class="text-uppercase text-wrap titre">S t o r e</h2>
-        </div>
+      <div class="row justify-content-around my-2">
+        <h2 class="text-uppercase text-wrap titre">S t o r e</h2>
+      </div>
 
-        <!-- MULTIPLIER -->
+      <!-- MULTIPLIER -->
 
-        <div class="row justify-content-center bg-second mb-2 rounded-3" id="multiBanner">
+      <div class="row justify-content-center mb-2 rounded-3" id="multiBanner">
+        <div class="col-10 rounded-3 bg-second">
           <p class="fw-lighter text-uppercase pt-2">M u l t i p l i e r s</p>
         </div>
+      </div>
 
-        <div class="row justify-content-center">
+      <div class="row justify-content-center">
 
-          <!-- FIRST MULTIPLIER -->
-          <div class="col-6 col-sm-3">
-            <div class="col-12">
-              <small>+1</small>
-            </div>
-            <div class="col-12">
-              <img src="images/superball.png" id="superball" class="small-img img-button">
-            </div>
-            <div class="col-12">
-              <small id="m-1-p">$20<br>Superball</small>
-            </div>
+        <!-- FIRST MULTIPLIER -->
+        <div class="col-6 col-sm-3">
+          <div class="col-12">
+            <small>+1</small>
           </div>
-
-          <!-- Second MULTIPLIER-->
-          <div class="col-6 col-sm-3">
-            <div class="col-12">
-              <small>+2</small>
-            </div>
-            <div class="col-12">
-              <img src="images/ultraball.png" id="ultraball" class="small-img img-button">
-            </div>
-            <div class="col-12">
-              <small id="m-2-p">$100<br>Ultraball</small>
-            </div>
+          <div class="col-12">
+            <img src="images/superball.png" id="superball" class="small-img img-button">
           </div>
-
-          <!-- THIRD MULTIPLIER -->
-          <div class="col-6 col-sm-3">
-            <div class="col-12">
-              <small>+5</small>
-            </div>
-            <div class="col-12">
-              <img src="images/masterball.png" id="masterball" class="small-img img-button">
-            </div>
-            <div class="col-12">
-              <small id="m-3-p">$300<br>Masterball</small>
-            </div>
-          </div>
-
-          <!-- FOURTH MULTIPLIER -->
-          <div class="col-6 col-sm-3">
-            <div class="col-12">
-              <small>+10</small>
-            </div>
-            <div class="col-12">
-              <img src="images/goldball.png" id="goldball" class="small-img img-button">
-            </div>
-            <div class="col-12">
-              <small id="m-4-p">$1250<br>Goldball</small>
-            </div>
+          <div class="col-12">
+            <small id="m-1-p">$20<br>Superball</small>
           </div>
         </div>
 
-        <!--  MULTIPLIER ----- ENND !! -->
-
-
-        <!-- DEBUT AUTO-CLICKERS -->
-        <div class="row bg-second my-1 rounded-3 mt-4 mb-2" id="autoBanner">
-          <p class="fw-lighter text-uppercase pt-2 ">A u t o - c l i c k e r s</p>
-        </div>
-
-        <!-- FIRST -->
-        <div class="row justify-content-center align-items-center m-0">
-          <div class="col-2"><img src="images/autoMagikarp.png" id="auto-clicker-1"
-              onclick="if(score > magikarp.price){this.src='images/autoMagikarp.gif'}"></div>
-          <div class="col-7">
-            <p><span class="store-title">Magikarp | <span id="ac-1-p">$50</span></span><br>
-
-              <span class="fw-light"><small>Gives you 2 extra $okédollar per second</small></span>
-            </p>
-
-
+        <!-- Second MULTIPLIER-->
+        <div class="col-6 col-sm-3">
+          <div class="col-12">
+            <small>+2</small>
           </div>
-          <div class="col-2 ac-1-c" id="ac-1-c">0</div>
-        </div>
-
-        <!-- SECOND -->
-        <div class="row justify-content-center align-items-center m-0">
-          <div class="col-2"><img src="images/autoSnorlax.png" id="auto-clicker-2"
-              onclick="if(score > snorlax.price){this.src='images/autoSnorlax.gif'}"></div>
-          <div class="col-7">
-            <p><span class="store-title">Snorlax | <span id="ac-2-p">$150</span></span><br>
-              <span class="fw-light"><small>Gives you 4 extra $okédollar per second</small></span>
-            </p>
-
-
+          <div class="col-12">
+            <img src="images/ultraball.png" id="ultraball" class="small-img img-button">
           </div>
-          <div class="col-2 ac-2-c" id="ac-2-c">0</div>
-        </div>
-
-        <!-- THIRD -->
-        <div class="row justify-content-center align-items-center m-0">
-          <div class="col-2"><img src="images/autoPikachu.png" id="auto-clicker-3"
-              onclick="if(score > pikachu.price){this.src='images/autoPikachu.gif'}"></div>
-          <div class="col-7">
-            <p><span class="store-title">Pikachu | <span id="ac-3-p">$500</span></span> <br>
-              <span class="fw-light"><small>Gives you 10 extra $okédollar per second</small></span>
-            </p>
-
+          <div class="col-12">
+            <small id="m-2-p">$100<br>Ultraball</small>
           </div>
-          <div class="col-2 ac-3-c" id="ac-3-c">0</div>
         </div>
 
-        <!-- FOURTH -->
-        <div class="row justify-content-center align-items-center m-0">
-          <div class="col-2"><img src="images/autoMewtwo.png" id="auto-clicker-4"
-              onclick="if(score > mewtwo.price){this.src='images/autoMewtwo.gif'}"></div>
-          <div class="col-7">
-            <p><span class="store-title">Mewtwo | <span id="ac-4-p">$1250</span></span> <br>
-              <span class="fw-light"><small>Gives you 15 extra $okédollar per second</small></span>
-            </p>
-
+        <!-- THIRD MULTIPLIER -->
+        <div class="col-6 col-sm-3">
+          <div class="col-12">
+            <small>+5</small>
           </div>
-          <div class="col-2 ac-4-c" id="ac-4-c">0</div>
+          <div class="col-12">
+            <img src="images/masterball.png" id="masterball" class="small-img img-button">
+          </div>
+          <div class="col-12">
+            <small id="m-3-p">$300<br>Masterball</small>
+          </div>
         </div>
+
+        <!-- FOURTH MULTIPLIER -->
+        <div class="col-6 col-sm-3">
+          <div class="col-12">
+            <small>+10</small>
+          </div>
+          <div class="col-12">
+            <img src="images/goldball.png" id="goldball" class="small-img img-button">
+          </div>
+          <div class="col-12">
+            <small id="m-4-p">$1250<br>Goldball</small>
+          </div>
+        </div>
+      </div>
+
+      <!--  MULTIPLIER ----- ENND !! -->
+
+
+      <!-- DEBUT AUTO-CLICKERS -->
+      <div class="row justify-content-center mb-2 my-1 rounded-3 mt-4 mb-2" id="autoBanner">
+        <div class="col-10 rounded-3 bg-second">
+        <p class="fw-lighter text-uppercase pt-2 ">A u t o - c l i c k e r s</p>
+        </div>
+      </div>
+
+      <!-- FIRST -->
+      <div class="row justify-content-center align-items-center m-0">
+        <div class="col-2"><img src="images/autoMagikarp.png" id="auto-clicker-1"
+            onclick="if(score > magikarp.price){this.src='images/autoMagikarp.gif'}"></div>
+        <div class="col-7">
+          <p><span class="store-title">Magikarp | <span id="ac-1-p">$50</span></span><br>
+
+            <span class="fw-light"><small>Gives you 2 extra $okédollar per second</small></span>
+          </p>
+
+
+        </div>
+        <div class="col-2 ac-1-c" id="ac-1-c">0</div>
+      </div>
+
+      <!-- SECOND -->
+      <div class="row justify-content-center align-items-center m-0">
+        <div class="col-2"><img src="images/autoSnorlax.png" id="auto-clicker-2"
+            onclick="if(score > snorlax.price){this.src='images/autoSnorlax.gif'}"></div>
+        <div class="col-7">
+          <p><span class="store-title">Snorlax | <span id="ac-2-p">$150</span></span><br>
+            <span class="fw-light"><small>Gives you 4 extra $okédollar per second</small></span>
+          </p>
+
+
+        </div>
+        <div class="col-2 ac-2-c" id="ac-2-c">0</div>
+      </div>
+
+      <!-- THIRD -->
+      <div class="row justify-content-center align-items-center m-0">
+        <div class="col-2"><img src="images/autoPikachu.png" id="auto-clicker-3"
+            onclick="if(score > pikachu.price){this.src='images/autoPikachu.gif'}"></div>
+        <div class="col-7">
+          <p><span class="store-title">Pikachu | <span id="ac-3-p">$500</span></span> <br>
+            <span class="fw-light"><small>Gives you 10 extra $okédollar per second</small></span>
+          </p>
+
+        </div>
+        <div class="col-2 ac-3-c" id="ac-3-c">0</div>
+      </div>
+
+      <!-- FOURTH -->
+      <div class="row justify-content-center align-items-center m-0">
+        <div class="col-2"><img src="images/autoMewtwo.png" id="auto-clicker-4"
+            onclick="if(score > mewtwo.price){this.src='images/autoMewtwo.gif'}"></div>
+        <div class="col-7">
+          <p><span class="store-title">Mewtwo | <span id="ac-4-p">$1250</span></span> <br>
+            <span class="fw-light"><small>Gives you 15 extra $okédollar per second</small></span>
+          </p>
+
+        </div>
+        <div class="col-2 ac-4-c" id="ac-4-c">0</div>
+      </div>
 
       <!-- </div> -->
 
