@@ -120,8 +120,7 @@ function autoClick(autObject) {
 
     //let total= autObject.count * autObject.value;
     //autoAccu += total;
-    console.log("this is caccu " + autoAccu);
-    console.log("this is obj count" + autObject.count);
+
     autoIncrease(autoAccu);
     //cookieCounter.innerHTML = score;  
 
@@ -140,17 +139,23 @@ let currentBallImage = pokeballImage;
 
 
 function booster(toggle) {
-  console.log(toggle);
+
   if (toggle) {
+    boostAlert();
     multiplierAccu += 20;
-    console.log("booster now is on")
-    console.log(new Date().getTime())
+
     multiplierValue.innerHTML = Math.round(multiplierAccu);
 
   } else {
+
+    let getBoostAlert = document.getElementsByClassName("boostAlert");
+    console.log(getBoostAlert);
+    for (let boostAlert of getBoostAlert) {
+      boostAlert.style.display = 'none';
+    }
+
     multiplierAccu -= 20;
-    console.log("booster now is of")
-    console.log(new Date().getTime())
+
     multiplierValue.innerHTML = Math.round(multiplierAccu);
 
     pokeButton.style.backgroundImage = currentBallImage;
@@ -166,12 +171,12 @@ function showBooster() {
 
 function callBooster() {
   booster(true);
-  console.log("called booster");
+
   setTimeout(booster, 5000, false);
 
 }
 
-setInterval(showBooster, 18000);
+setInterval(showBooster, 15000);
 
 
 
@@ -216,18 +221,30 @@ document.getElementById("cookie-btn").addEventListener('click', () => {
 
 document.getElementById("badge-btn").addEventListener('click', () => {
   badge.style.visibility = "hidden";
-  pokeButton.style.backgroundImage = "url('./images/bonusball.png')"
-
+  pokeButton.style.backgroundImage = "url('./images/bonusball.png')";
   callBooster()
 
 })
 
 
-
-function yourTooPoor(banner, timer) {
+function boostAlert() {
   const toast = document.createElement("div");
-  const pokeAlert = document.createTextNode('Not enough $okédollar');
-  toast.appendChild(pokeAlert);
+  const boostMessage = document.createTextNode('! Moon ball activated !');
+  const infoCookies = document.getElementById("getAll");
+  toast.appendChild(boostMessage);
+  infoCookies.appendChild(toast);
+  toast.style.backgroundColor = "#FF0000";
+  toast.style.color = "white";
+  toast.classList.add("rounded-3");
+  toast.classList.add("boostAlert");
+
+
+}
+
+function pokeAlert(banner, timer) {
+  const toast = document.createElement("div");
+  const pokeMessage = document.createTextNode('Not enough $okédollar');
+  toast.appendChild(pokeMessage);
   banner.appendChild(toast);
   toast.style.backgroundColor = "#FF0000";
   toast.style.color = "white";
@@ -257,7 +274,6 @@ document.getElementById("superball").addEventListener('click', () => {
     let roundPrice = Math.round(multiplier.price)
     superBallPrice.innerHTML = ` $ ${roundPrice} <br> Superball`
     increase(multiplierAccu);
-    console.log(ultraBall.count);
 
     if (ultraBall.count>0||masterBall.count>0||goldBall.count>0) {
       return 
@@ -271,7 +287,7 @@ document.getElementById("superball").addEventListener('click', () => {
   }
   else if (score < multiplier.price) {
 
-    yourTooPoor(multiBanner, 2500)
+    pokeAlert(multiBanner, 2500)
 
   }
 
@@ -308,7 +324,7 @@ document.getElementById("ultraball").addEventListener('click', () => {
   }
   else if (score < ultraBall.price) {
 
-    yourTooPoor(multiBanner, 2500)
+    pokeAlert(multiBanner, 2500)
 
   }
 
@@ -344,7 +360,7 @@ document.getElementById("masterball").addEventListener('click', () => {
   }
   else if (score < masterBall.price) {
 
-    yourTooPoor(multiBanner, 2500)
+    pokeAlert(multiBanner, 2500)
 
   }
 
@@ -377,7 +393,7 @@ document.getElementById("goldball").addEventListener('click', () => {
   }
   else if (score < goldBall.price) {
 
-    yourTooPoor(multiBanner, 2500)
+    pokeAlert(multiBanner, 2500)
 
   }
 
@@ -409,7 +425,7 @@ document.getElementById("auto-clicker-1").addEventListener('click', () => {
   }
   else if (score < magikarp.price) {
 
-    yourTooPoor(autoBanner, 2500)
+    pokeAlert(autoBanner, 2500)
 
   }
 })
@@ -433,7 +449,7 @@ document.getElementById("auto-clicker-2").addEventListener('click', () => {
   }
   else if (score < snorlax.price) {
 
-    yourTooPoor(autoBanner, 2500)
+    pokeAlert(autoBanner, 2500)
 
   }
 })
@@ -458,7 +474,7 @@ document.getElementById("auto-clicker-3").addEventListener('click', () => {
   }
   else if (score < pikachu.price) {
 
-    yourTooPoor(autoBanner, 2500)
+    pokeAlert(autoBanner, 2500)
 
   }
 })
@@ -483,7 +499,7 @@ document.getElementById("auto-clicker-4").addEventListener('click', () => {
   }
   else if (score < mewtwo.price) {
 
-    yourTooPoor(autoBanner, 2500)
+    pokeAlert(autoBanner, 2500)
 
   }
 })
